@@ -1,21 +1,28 @@
 package com.example.moodplaylist.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Song {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO) // ✅ Add this line!
     private Long id;
+
     private String title;
     private String artist;
     private String mood;
     private String link;
 
-    // Getters and setters
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -49,4 +56,5 @@ public class Song {
     public void setLink(String link) {
         this.link = link;
     }
+// Getters and Setters (unchanged)
 }

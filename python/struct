@@ -1,0 +1,5 @@
+mood_playlist/
+├── app.py         # Main Flask app
+├── uploads/       # Directory to store uploaded images
+├── venv/          # Virtual environment (auto-created)
+└── requirements.txt  # Dependency file
